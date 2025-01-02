@@ -51,19 +51,19 @@ while True:
     # Выполнение цикла действий до завершения игры
     while check_end_game() == False:
         # Реализация перехода хода от игрока и игроку
-        for turning_player in players:
+        for turn_player in players:
             # Выход из цикла при завершении игры
             if check_end_game() != False:
                 break
             # Цикл для игрока, чтобы из него выйти, нужно ввести верные координаты
             while True:
                 # Ввод координат игроком
-                vertical = int(input(f"Ход игрока {turning_player}. Введите номер вертикали поля: "))
+                vertical = int(input(f"Ход игрока {turn_player}. Введите номер вертикали поля: "))
                 horizontal = int(input("Введите номер горизонтали поля: "))
                 # Проверка на корректность ввода координат
                 if (vertical, horizontal) in field.keys() and field[(vertical, horizontal)] == '-':
                     # Обработка хода
-                    field[(vertical, horizontal)] = turning_player
+                    field[(vertical, horizontal)] = turn_player
                     # Вывод поля в его новом состоянии
                     output_of_the_field()
                     break
