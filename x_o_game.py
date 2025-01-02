@@ -3,8 +3,8 @@ field_size = 3
 # Игровое поле, пока что в виде пустого словаря
 field = {}
 # Заполнение словаря парами координаты-содержимое поля
-for vertical in range(field_size):
-    for horizontal in range(field_size):
+for horizontal in range(field_size):
+    for vertical in range(field_size):
          field[(vertical, horizontal)] = '-'
 def output_of_the_field():
     '''Функция, которая будет отображать текущее состояние игрового поля в консоли'''
